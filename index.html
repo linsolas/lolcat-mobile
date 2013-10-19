@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Lolcat Mobile</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lolcat-mobile.css" rel="stylesheet">
+</head>
+<body>
+
+    <ol class="breadcrumb">
+        <li><i class="icon-globe"></i> Lolcat Mobile</li>
+        <li class="active"><a href="#">My Todo list</a></li>
+    </ol>
+
+    <div ng-controller="todoController">
+        <div class="pull-right" style="margin-right: 20px; font-size: 150%;">
+            View as:
+            <a href="#" ng-click="viewAs = 'list'"><i class="icon-list"></i> list</a>
+            <a href="#" ng-click="viewAs = 'cards'"><i class="icon-th-large"></i> cards</a>
+        </div>
+
+        <div ng-show="viewAs == 'list'">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="lolcat in lolcats">
+                        <td><img src="{{lolcat.image}}" width="100px" height="60px"></td>
+                        <td>{{lolcat.name}}</td>
+                        <td><i class="{{lolcat.status.icon}}"></i> {{lolcat.status.name}}</td>
+                        <td>{{lolcat.date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-show="viewAs == 'cards'">
+            <div ng-repeat="lolcat in lolcats">
+
+                <div id="carousel-example-generic" class="carousel slide">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+
+                      <div class="todo-card">
+                           <img src="{{lolcat.image}}">
+                      </div>
+
+
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                  </a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+    <script src="data.js"></script>
+    <script src="angular-controller.js"></script>
+</body>
+</html>
