@@ -2,3 +2,22 @@
     border: solid 3px #a9a9a9;
     border-radius: 10px;
 }
+
+body {
+    background: url(images/background.jpg) repeat;
+}
+
+.navbar {
+    background: url(images/background-dark.jpg) repeat;
+    text-transform: uppercase;
+}
+
+div.item-card {
+    padding: 5px;
+}
+
+div.item-card div {
+    border: solid 2px #a9a9a9;
+    border-radius: 10px;
+    padding: 5px;
+}

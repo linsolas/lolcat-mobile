@@ -8,75 +8,69 @@
 </head>
 <body>
 
-    <ol class="breadcrumb">
-        <li><i class="icon-globe"></i> Lolcat Mobile</li>
-        <li class="active"><a href="#">My Todo list</a></li>
-    </ol>
-
     <div ng-controller="todoController">
-        <div class="pull-right" style="margin-right: 20px; font-size: 150%;">
-            View as:
-            <a href="#" ng-click="viewAs = 'list'"><i class="icon-list"></i> list</a>
-            <a href="#" ng-click="viewAs = 'cards'"><i class="icon-th-large"></i> cards</a>
-        </div>
 
-        <div ng-show="viewAs == 'list'">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="lolcat in lolcats">
-                        <td><img src="{{lolcat.image}}" width="100px" height="60px"></td>
-                        <td>{{lolcat.name}}</td>
-                        <td><i class="{{lolcat.status.icon}}"></i> {{lolcat.status.name}}</td>
-                        <td>{{lolcat.date}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div ng-show="viewAs == 'cards'">
-            <div ng-repeat="lolcat in lolcats">
-
-                <div id="carousel-example-generic" class="carousel slide">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-
-                      <div class="todo-card">
-                           <img src="{{lolcat.image}}">
-                      </div>
-
-
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="icon-prev"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="icon-next"></span>
-                  </a>
-                </div>
-
-
-
-
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"><i class="icon-globe"></i> Lolcat Mobile</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><i class="icon-list"></i> My Todo list</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">View as:</a></li>
+                <li><a href="#" ng-click="viewAs = 'list'"><i class="icon-list"></i> list</a></li>
+                <li><a href="#" ng-click="viewAs = 'cards'"><i class="icon-th-large"></i> cards</a></li>
+                <li><a href="#" ng-click="viewAs = 'single-card'"><i class="icon-list-alt"></i> card</a></li>
+            </ul>
         </div>
 
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div ng-show="viewAs == 'list'">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="lolcat in lolcats">
+                            <td><img src="{{lolcat.image}}" width="100px" height="60px"></td>
+                            <td>{{lolcat.name}}</td>
+                            <td><i class="{{lolcat.status.icon}}"></i> {{lolcat.status.name}}</td>
+                            <td>{{lolcat.date}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div ng-show="viewAs == 'cards'">
+                <div ng-repeat="lolcat in lolcats">
+                    <div class="col-sm-4 col-md-4 col-lg-4 item-card">
+                        <div>
+                            {{lolcat.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="viewAs == 'single-cards'">
+                <div ng-repeat="lolcat in lolcats">
+
+                    <div  class="">
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
