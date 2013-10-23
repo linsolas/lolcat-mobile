@@ -1,15 +1,15 @@
 var STATUS = {
     NO_VOTE: {
         name: 'Not voted',
-        icon: 'icon-check-empty'
+        icon: 'fa-square-o'
     },
     VALIDATED: {
         name: 'Validated',
-        icon: 'icon-thumbs-up'
+        icon: 'fa-thumbs-up'
     },
     REFUSED: {
         name: 'Refused',
-        icon: 'icon-thumbs-down'
+        icon: 'fa-thumbs-down'
     }
 }
 

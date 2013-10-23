@@ -12,17 +12,17 @@
 
         <div class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand"><i class="icon-globe"></i> Lolcat Mobile</a>
+                <a href="#" class="navbar-brand"><i class="fa fa-globe"></i> Lolcat Mobile</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><i class="icon-list"></i> My Todo list</a></li>
+                <li class="active"><a href="#"><i class="fa fa-list"></i> My Todo list</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">View as:</a></li>
-                <li><a href="#" ng-click="viewAs = 'list'"><i class="icon-list"></i> list</a></li>
-                <li><a href="#" ng-click="viewAs = 'cards'"><i class="icon-th-large"></i> cards</a></li>
-                <li><a href="#" ng-click="viewAs = 'single-card'"><i class="icon-list-alt"></i> card</a></li>
+                <li><a href="#" ng-click="viewAs = 'list'"><i class="fa fa-list"></i> list</a></li>
+                <li><a href="#" ng-click="viewAs = 'cards'"><i class="fa fa-th-large"></i> cards</a></li>
+                <li><a href="#" ng-click="viewAs = 'single-card'"><i class="fa fa-list-alt"></i> card</a></li>
             </ul>
         </div>
 
@@ -41,7 +41,7 @@
                         <tr ng-repeat="lolcat in lolcats">
                             <td><img src="{{lolcat.image}}" width="100px" height="60px"></td>
                             <td>{{lolcat.name}}</td>
-                            <td><i class="{{lolcat.status.icon}}"></i> {{lolcat.status.name}}</td>
+                            <td><i class="fa {{lolcat.status.icon}}"></i> {{lolcat.status.name}}</td>
                             <td>{{lolcat.date}}</td>
                         </tr>
                     </tbody>
@@ -78,10 +78,6 @@
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
-
-    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
-    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>-->
 
     <script src="js/data.js"></script>
     <script src="js/angular-controller.js"></script>
