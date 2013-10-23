@@ -2,9 +2,9 @@
 <html ng-app xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Lolcat Mobile</title>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lolcat-mobile.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lolcat-mobile.css" rel="stylesheet">
 </head>
 <body>
 
@@ -52,7 +52,7 @@
                 <div ng-repeat="lolcat in lolcats">
                     <div class="col-sm-4 col-md-4 col-lg-4 item-card">
                         <div>
-                            {{lolcat.name}}
+                            <span class="card-title">{{lolcat.name}}</span>
                         </div>
                     </div>
                 </div>
@@ -75,11 +75,15 @@
 
 
 
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
 
-    <script src="data.js"></script>
-    <script src="angular-controller.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+    <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>-->
+
+    <script src="js/data.js"></script>
+    <script src="js/angular-controller.js"></script>
 </body>
 </html>

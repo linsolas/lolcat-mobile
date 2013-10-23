@@ -4,11 +4,11 @@
 }
 
 body {
-    background: url(images/background.jpg) repeat;
+    background: url(../images/background.jpg) repeat;
 }
 
 .navbar {
-    background: url(images/background-dark.jpg) repeat;
+    background: url(../images/background-dark.jpg) repeat;
     text-transform: uppercase;
 }
 
@@ -21,3 +21,9 @@ div.item-card div {
     border-radius: 10px;
     padding: 5px;
 }
+
+.card-title {
+    font-weight: bold;
+    color: #4169e1;
+}
+
